@@ -98,6 +98,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickDelphiMVCFrameWork(Sender: TObject);
      procedure OnclickJEDIJCL(Sender: TObject);
      procedure OnclickJEDIJVCL(Sender: TObject);
+     procedure OnclickJediInc(Sender: TObject);
      procedure OnclickDelphiMessageBus(Sender: TObject);
      procedure OnclickDelphiDocker(Sender: TObject);
      procedure OnclickEmbarcaderoGitHub(Sender: TObject);
@@ -416,11 +417,13 @@ begin
   CreateSubMenu(itemGitHubs, 'Delphi MVC FrameWork' , 'imDelphiMVCFrameWork', OnClickDelphiMVCFrameWork);
   CreateSubMenu(itemGitHubs, 'JEDI JCL' , 'imJediJCL', OnclickJEDIJCL);
   CreateSubMenu(itemGitHubs, 'JEDI JVCL' , 'imJediJVCL', OnclickJEDIJVCL);
+  CreateSubMenu(itemGitHubs, 'Onde pegar o JEdi.inc' , 'imJediINC', OnclickJediInc);
   CreateSubMenu(itemGitHubs, 'Delphi MessageBus' , 'imDelphiMessageBus', OnclickDelphiMessageBus);
   CreateSubMenu(itemGitHubs, 'Delphi Docker' , 'imDelphiDocker', OnclickDelphiDocker);
   CreateSubMenu(itemGitHubs, 'Embarcadero' , 'imEmbarcaderoGitHub', OnclickEmbarcaderoGitHub);
   CreateSubMenu(itemGitHubs, 'Chromium' , 'imChromiumGitHub', OnclickChromiumGitHub);
   CreateSubMenu(itemGitHubs, 'Skia4Delphi' , 'imSkia4Delphi', OnclickSkia4Delphi);
+
 
 
   {Horse API}
@@ -729,6 +732,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickimGetIt(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://getitnow.embarcadero.com/', '', '',0);
+end;
+
+procedure TFSDMainMenuWizard.OnclickJediInc(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://github.com/project-jedi/jedi', '', '',0);
 end;
 
 procedure TFSDMainMenuWizard.OnclickJEDIJCL(Sender: TObject);
