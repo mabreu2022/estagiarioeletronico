@@ -1,0 +1,99 @@
+unit FSD.HistoryProjects.Forms;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, System.IniFiles;
+
+type
+  TFSDHistoryProjectsForms = class(TForm)
+    Panel1: TPanel;
+    Edit1: TEdit;
+    lstProjects: TListBox;
+    procedure FormShow(Sender: TObject);
+  private
+    FIniFile: TIniFile;
+
+    procedure LoadIniFile;
+    procedure ListarProjetos;
+    { Private declarations }
+
+  public
+    { Public declarations }
+  end;
+
+var
+  FSDHistoryProjectsForms: TFSDHistoryProjectsForms;
+
+procedure ShowHistoryProjects;
+
+implementation
+
+procedure ShowHistoryProjects;
+begin
+  if not Assigned(FSDHistoryProjectsForms) then
+    FSDHistoryProjectsForms := TFSDHistoryProjectsForms.Create(nil);
+
+  FSDHistoryProjectsForms.ShowModal;
+
+end;
+
+{$R *.dfm}
+
+
+procedure TFSDHistoryProjectsForms.FormShow(Sender: TObject);
+begin
+  listarProjetos;
+end;
+
+procedure TFSDHistoryProjectsForms.ListarProjetos;
+var
+  i: integer;
+  sections : TStrings;
+  projectName: string;
+  fileName: string;
+begin
+  loadIniFile;
+  lstProjects.Clear;
+
+  sections := TStringList.Create;
+  try
+    FIniFile.ReadSections(sections);
+
+    for i:=0 to Pred(sections.Count) do
+    begin
+      fileName:= sections[i];
+      projectName :=  FIniFile.ReadString(sections[i], 'ProjectName', '');
+
+      if not FileExists(fileName) then
+        Continue;
+
+      lstProjects.Items.Add(projectName + ' | ' + fileName);
+
+    end;
+
+  finally
+
+  end;
+
+end;
+
+procedure TFSDHistoryProjectsForms.LoadIniFile;
+var
+  iniFileName: string;
+begin
+  FreeAndNil(FIniFile);
+  iniFileName := ExtractFilePath(GetModuleName(HInstance)) +
+             '\SeniorDeveloper\HistoryProjects.ini';
+
+  FIniFile := TIniFile.Create(iniFileName);
+end;
+
+initialization
+
+finalization
+  FSDHistoryProjectsForms.Free;
+
+
+end.
