@@ -1,4 +1,4 @@
-# estagiarioeletronico
+# Estagiario Eletrônico - Versão Free
 
 Projeto que adiciona uma opção no menu do DELPHI
 Adiciona menu : Livros - Com links para compras ou PDFs existentes
