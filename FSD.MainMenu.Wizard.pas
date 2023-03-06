@@ -137,9 +137,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      {Livros}
      procedure OnClickLivroDelphiAndroid(Sender: TObject);
      procedure OnClickLivroObjectPascal(Sender: TObject);
-     procedure OnClickLivroOpenToolsAPI(Sender: Tobject);
-     procedure OnClickLivroPadroesProjeto(Sender: TObject);
-     procedure OnClickLivroObjectPascalSydney(Sender: TObject);
+
 
 
      function CreateSubMenu(AParent: TMenuItem;
@@ -324,9 +322,7 @@ begin
   itemLivros := CreateSubMenu(itemFormacao, 'Livros de Delphi (Compras)', 'imLivros', nil);
   CreateSubMenu(itemLivros, 'Delphi para Android e iOS: Desenvolvendo Aplicativos Móveis', 'imLivrosDelphiAndroid', OnClickLivroDelphiAndroid);
   CreateSubMenu(itemLivros, 'Object Pascal Para Delphi', 'imLivrosObjectPascal', OnClickLivroObjectPascal);
-  CreateSubMenu(itemLivros, 'Delphi Open Tools API PDF', 'imLivrosOpenToolsAPI', OnClickLivroOpenToolsAPI);
-  CreateSubMenu(itemLivros, 'Padrões de Projetos PDF', 'imLivrosPadroesProjeto', OnClickLivroPadroesProjeto);
-  CreateSubMenu(itemLivros, 'Object Pascal Sydney Version PDF', 'imLivrosObjectPascalSydney', OnClickLivroObjectPascalSydney);
+
 
   {Ferramentas para Download}
   itemFerramentas := CreateSubMenu(itemFormacao, 'Ferramentas para Download', 'imFerramentas', nil);
@@ -492,21 +488,6 @@ end;
 procedure TFSDMainMenuWizard.OnClickLivroObjectPascal(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.amazon.com.br/Object-Pascal-Delphi-Israel-Avillano/dp/8573938323/ref=sr_1_2?keywords=delphi+programa%C3%A7%C3%A3o&qid=1675782875&sprefix=Delphi+programa%2Caps%2C213&sr=8-2', '', '', 0);
-end;
-
-procedure TFSDMainMenuWizard.OnClickLivroObjectPascalSydney(Sender: TObject);
-begin
-  ShellExecute(HInstance, 'open', 'https://drive.google.com/file/d/1yvuZFkjWoFZLghGSyNorEl-oxMNzZR61/view?usp=share_link', '', '', 0);
-end;
-
-procedure TFSDMainMenuWizard.OnClickLivroOpenToolsAPI(Sender: Tobject);
-begin
-  ShellExecute(HInstance, 'open', 'https://drive.google.com/file/d/1GXuNYxHHgJ6U7XUD_NP-8nvGtJAf4Vg8/view?usp=share_link', '', '', 0);
-end;
-
-procedure TFSDMainMenuWizard.OnClickLivroPadroesProjeto(Sender: TObject);
-begin
-  ShellExecute(HInstance, 'open', 'https://drive.google.com/file/d/1kpTisLJIiTQmpnBd7BNlMgaWyeS_9e4y/view?usp=share_link', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickMenuHistoryProjects(Sender: TObject);

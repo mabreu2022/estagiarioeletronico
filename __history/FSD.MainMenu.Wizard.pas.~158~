@@ -62,6 +62,8 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickDevPoint(Sender: TObject);
 
      {YouTube}
+     procedure OnClickEmbarcaderoBrasil(Sender: TObject);
+     procedure OnClickEmbarcadero(Sender: TObject);
      procedure onClickYouTubeConectSolutions(Sender: Tobject);
      procedure onClickVoiceEnabledApp(Sender: TObject);
      procedure OnClickGitHubCurso(Sender: TObject);
@@ -72,8 +74,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickDelphicon2023_day2(Sender: TObject);
      procedure OnClickDelphicon2023_day3(Sender: TObject);
      procedure OnClickmqfb(Sender: TObject);
-
-
+     procedure OnClickChapmanWorld(Sender: TObject);
 
      procedure OnClickOTA(Sender: TObject);
      procedure OnclickDelphiBasics(Sender: TObject);
@@ -97,6 +98,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickDelphiMVCFrameWork(Sender: TObject);
      procedure OnclickJEDIJCL(Sender: TObject);
      procedure OnclickJEDIJVCL(Sender: TObject);
+     procedure OnclickJediInc(Sender: TObject);
      procedure OnclickDelphiMessageBus(Sender: TObject);
      procedure OnclickDelphiDocker(Sender: TObject);
      procedure OnclickEmbarcaderoGitHub(Sender: TObject);
@@ -111,6 +113,9 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickBlogMarcoCantu(Sender: TObject);
      procedure OnClickBlogZettaOmmnis(Sender: TObject);
      procedure OnClickBlogChapmanWorld(Sender: TObject);
+     procedure OnClickBlogRoadToDelphi(Sender: TObject);
+     procedure OnClickBlogLandgrafDev(Sender: TObject);
+     procedure OnClickBlogStephenBalls(Sender: TObject);
 
      {Ferramentas para Download}
      procedure OnClickFerramentasIbExpert(Sender: TObject);
@@ -122,6 +127,8 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickFerramentasInnoScriptStudio(Sender: TObject);
      procedure OnClickFerramentasInsomnia(Sender: TObject);
      procedure OnClickFerramentasNavicat(Sender: TObject);
+     procedure OnClickFerramentasIdeFixPack(Sender: TObject);
+     procedure OnClickFerramentasToolsFree(Sender: TObject);
 
      {Grupos de Facebook}
      procedure OnClickFacebookDelphiTips(Sender: TObject);
@@ -332,6 +339,8 @@ begin
   CreateSubMenu(itemFerramentas, 'Inno SEtup Script Studio', 'imFerramentasInnoScriptStudio', OnClickFerramentasInnoScriptStudio);
   CreateSubMenu(itemFerramentas, 'Insomnia', 'imFerramentasInsomnia', OnClickFerramentasInsomnia);
   CreateSubMenu(itemFerramentas, 'Navicat', 'imFerramentasNavicat', OnClickFerramentasNavicat);
+  CreateSubMenu(itemFerramentas, 'Ide Fix Pack e DDevExtensions', 'imFerramentasIdeFixPack', OnClickFerramentasIdeFixPack);
+  CreateSubMenu(itemFerramentas, 'Ferramentas free da Embarcadero', 'imFerramentasToolsFree', OnClickFerramentasToolsFree);
 
   {Blogs}
   itemBlogs := CreateSubMenu(itemFormacao, 'Blogs', 'imBlogs', nil);
@@ -341,6 +350,10 @@ begin
   CreateSubMenu(itemBlogs, 'Marco Tech Blog', 'imBlogMarcoCantu', OnClickBlogMarcoCantu);
   CreateSubMenu(itemBlogs, 'Zetta Ommnis Soluções', 'imBlogZettaOmmnis', OnClickBlogZettaOmmnis);
   CreateSubMenu(itemBlogs, 'Chapman World', 'imBlogChapmanWorld', OnClickBlogChapmanWorld);
+  CreateSubMenu(itemBlogs, 'The Road to Delphi', 'imBlogRoadToDelphi', OnClickBlogRoadToDelphi);
+  CreateSubMenu(itemBlogs, 'Landrgraf.Dev', 'imBlogLandgrafDev', OnClickBlogLandgrafDev);
+  CreateSubMenu(itemBlogs, 'Stephen Balls Technical Blog', 'imBlogStephenBalls', OnClickBlogStephenBalls);
+
 
   {Grupos FaceBook - Delphi}
   itemGruposFaceBook := CreateSubMenu(itemFormacao, 'Grupos de Facebook', 'imFaceGroup', nil);
@@ -358,6 +371,8 @@ begin
 
   {YouTube}
   itemYouTube:= CreateSubMenu(itemFormacao, 'YouTube', 'imYouTube', nil);
+  CreateSubMenu(itemYouTube, 'Embarcadero Brasil', 'imEmbarcaderoBrasil', OnClickEmbarcaderoBrasil);
+  CreateSubMenu(itemYouTube, 'Embarcadero', 'imEmbarcadero', OnClickEmbarcadero);
   CreateSubMenu(itemYouTube, 'Conect Solutions ', 'imYouTubeConectSolutions', onClickYouTubeConectSolutions);
   CreateSubMenu(itemYouTube, 'Voice Enable Your Android Object Pascal Apps', 'imVoiceEnabledApp', onClickVoiceEnabledApp);
   CreateSubMenu(itemYouTube, 'Curso de GIT e GITHUB - O que é git?', 'imGitHubCurso', OnClickGitHubCurso);
@@ -368,7 +383,7 @@ begin
   CreateSubMenu(itemYouTube, 'Delphicon 2023 - Dia 2', 'imDelphicon2023_day2', OnClickDelphicon2023_day2);
   CreateSubMenu(itemYouTube, 'Delphicon 2023 - Dia 3', 'imDelphicon2023_day3', OnClickDelphicon2023_day3);
   CreateSubMenu(itemYouTube, 'Meu Querido Firebird', 'immqfb', OnClickmqfb);
-
+  CreateSubMenu(itemYouTube, 'Chapman World', 'imChapmanWorld', OnClickChapmanWorld);
 
   {Utilitários}
   itemUtilitarios := CreateSubMenu(itemFormacao, 'Utilitários', 'imUtilitarios', nil);
@@ -402,11 +417,13 @@ begin
   CreateSubMenu(itemGitHubs, 'Delphi MVC FrameWork' , 'imDelphiMVCFrameWork', OnClickDelphiMVCFrameWork);
   CreateSubMenu(itemGitHubs, 'JEDI JCL' , 'imJediJCL', OnclickJEDIJCL);
   CreateSubMenu(itemGitHubs, 'JEDI JVCL' , 'imJediJVCL', OnclickJEDIJVCL);
+  CreateSubMenu(itemGitHubs, 'Onde pegar o JEdi.inc' , 'imJediINC', OnclickJediInc);
   CreateSubMenu(itemGitHubs, 'Delphi MessageBus' , 'imDelphiMessageBus', OnclickDelphiMessageBus);
   CreateSubMenu(itemGitHubs, 'Delphi Docker' , 'imDelphiDocker', OnclickDelphiDocker);
   CreateSubMenu(itemGitHubs, 'Embarcadero' , 'imEmbarcaderoGitHub', OnclickEmbarcaderoGitHub);
   CreateSubMenu(itemGitHubs, 'Chromium' , 'imChromiumGitHub', OnclickChromiumGitHub);
   CreateSubMenu(itemGitHubs, 'Skia4Delphi' , 'imSkia4Delphi', OnclickSkia4Delphi);
+
 
 
   {Horse API}
@@ -582,9 +599,24 @@ begin
   ShellExecute(HInstance, 'open', 'https://blogs.embarcadero.com/', '', '', 0);
 end;
 
+procedure TFSDMainMenuWizard.OnClickBlogLandgrafDev(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://landgraf.dev/en/', '', '', 0);
+end;
+
 procedure TFSDMainMenuWizard.OnClickBlogMarcoCantu(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://blog.marcocantu.com/', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickBlogRoadToDelphi(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://theroadtodelphi.com/', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickBlogStephenBalls(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://delphiaball.co.uk/', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickBlogZettaOmmnis(Sender: TObject);
@@ -595,6 +627,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickBossSSH(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.youtube.com/watch?v=geAGT-M0RGY', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickChapmanWorld(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.youtube.com/@ChapmanWorldOnTube', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickChatGPT(Sender: TObject);
@@ -662,6 +699,16 @@ begin
   ShellExecute(HInstance, 'open', 'https://docwiki.embarcadero.com/Libraries/Alexandria/en/Main_Page', '', '',0);
 end;
 
+procedure TFSDMainMenuWizard.OnClickEmbarcadero(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.youtube.com/@EmbarcaderoTech', '', '',0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickEmbarcaderoBrasil(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.youtube.com/@embarcaderodobrasil', '', '',0);
+end;
+
 procedure TFSDMainMenuWizard.OnclickEmbarcaderoGitHub(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://github.com/Embarcadero', '', '',0);
@@ -685,6 +732,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickimGetIt(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://getitnow.embarcadero.com/', '', '',0);
+end;
+
+procedure TFSDMainMenuWizard.OnclickJediInc(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://github.com/project-jedi/jedi', '', '',0);
 end;
 
 procedure TFSDMainMenuWizard.OnclickJEDIJCL(Sender: TObject);
@@ -722,6 +774,11 @@ begin
   ShellExecute(HInstance, 'open', 'https://www.ibexpert.net/downloadcenter/', '', '', 0);
 end;
 
+procedure TFSDMainMenuWizard.OnClickFerramentasIdeFixPack(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.idefixpack.de/', '', '', 0);
+end;
+
 procedure TFSDMainMenuWizard.OnClickFerramentasInnoScriptStudio(
   Sender: TObject);
 begin
@@ -751,6 +808,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickFerramentasSQLiteExpert(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.sqliteexpert.com/download.html', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickFerramentasToolsFree(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.embarcadero.com/free-tools', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickFireBase4Delphi(Sender: TObject);
