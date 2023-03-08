@@ -214,6 +214,7 @@
             <ResourceType>BITMAP</ResourceType>
             <ResourceId>forumdelphi</ResourceId>
         </RcItem>
+        <None Include="EstagiarioEletronico.todo"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
