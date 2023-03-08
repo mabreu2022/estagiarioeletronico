@@ -7,7 +7,7 @@ uses
   FSD.HelloWorld.Wizard,
   FSD.HistoryProjects.Notifier,
   FSD.HistoryProjects.Binding,
-  FSD.HistoryProjects.ContextMenu,
+  FSD.HistoryProjects.ContextMenu;
   FSD.NewProject.Wizard;
 
   procedure Register;

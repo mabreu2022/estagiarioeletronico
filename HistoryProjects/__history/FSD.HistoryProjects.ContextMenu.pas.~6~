@@ -1,0 +1,247 @@
+unit FSD.HistoryProjects.ContextMenu;
+
+interface
+
+uses
+  ToolsAPI,
+  System.SysUtils,
+  System.Classes,
+  FSD.HistoryProjects.Forms;
+
+type TFSDHistoryProjectsContextMenu = class(TNotifierObject, IOTAPRojectMenuItemCreatorNotifier)
+
+  protected
+     procedure AddMenu(const Project: IOTAProject; const IdentList: TStrings;
+                       const ProjectManagerMenuList: IInterfaceList; IsMultiSelect: Boolean);
+  public
+    class function New: IOTAProjectMenuItemCreatorNotifier;
+end;
+
+  TFSDHistoryProjectsItemMEnu = class(TNotifierObject, IOTALocalMenu, IOTAProjectManagerMenu)
+    protected
+      function GetCaption: string;
+      /// <summary>
+      /// Returns the Checked state to be used for this menu item
+      /// </summary>
+      function GetChecked: Boolean;
+      /// <summary>
+      /// Returns the Enabled state to be used for this menu item
+      /// </summary>
+      function GetEnabled: Boolean;
+      /// <summary>
+      /// Returns the help context to be used for this menu item
+      /// </summary>
+      function GetHelpContext: Integer;
+      /// <summary>
+      /// Returns the Name for this menu item.  If blank, a name will be generated
+      /// </summary>
+      function GetName: string;
+      /// <summary>
+      /// Returns the parent menu for this menu item
+      /// </summary>
+      function GetParent: string;
+      /// <summary>
+      /// Returns the position of this menu item within the menu
+      /// </summary>
+      function GetPosition: Integer;
+      /// <summary>
+      /// Returns the verb associated with this menu item
+      /// </summary>
+      function GetVerb: string;
+      /// <summary>
+      /// Sets the Caption of the menu item to the specified value
+      /// </summary>
+      procedure SetCaption(const Value: string);
+      /// <summary>
+      /// Sets the Checked state of the menu item to the specified value
+      /// </summary>
+      procedure SetChecked(Value: Boolean);
+      /// <summary>
+      /// Sets the Enabled  state of the menu item to the specified value
+      /// </summary>
+      procedure SetEnabled(Value: Boolean);
+      /// <summary>
+      /// Sets the help context of the menu item to the specified value
+      /// </summary>
+      procedure SetHelpContext(Value: Integer);
+      /// <summary>
+      /// Sets the Name of the menu item to the specified value
+      /// </summary>
+      procedure SetName(const Value: string);
+      /// <summary>
+      /// Sets the Parent of the menu item to the specified value
+      /// </summary>
+      procedure SetParent(const Value: string);
+      /// <summary>
+      /// Sets the position of the menu item to the specified value
+      /// </summary>
+      procedure SetPosition(Value: Integer);
+      /// <summary>
+      /// Sets the verb associated with the menu item to the specified value
+      /// </summary>
+      procedure SetVerb(const Value: string);
+
+
+      /// Indicates whether or not this menu item supports multi-selected items
+      function GetIsMultiSelectable: Boolean;
+      /// Sets this menu item's multi-selected state
+      procedure SetIsMultiSelectable(Value: Boolean);
+      /// <summary>
+      /// Execute is called when the menu item is selected.  MenuContextList is a
+      /// list of IOTAProjectMenuContext.  Each item in the list represents an item
+      /// in the project manager that is selected
+      /// </summary>
+      procedure Execute(const MenuContextList: IInterfaceList); overload;
+      /// <summary>
+      /// PreExecute is called before the Execute method.  MenuContextList is a list
+      /// of IOTAProjectMenuContext.  Each item in the list represents an item in
+      /// the project manager that is selected
+      /// </summary>
+      function PreExecute(const MenuContextList: IInterfaceList): Boolean;
+      /// <summary>
+      /// PostExecute is called after the Execute method.  MenuContextList is a list
+      /// of IOTAProjectMenuContext.  Each item in the list represents an item in
+      /// the project manager that is selected
+      /// </summary>
+      function PostExecute(const MenuContextList: IInterfaceList): Boolean;
+
+  public
+     class function New: IOTAProjectManagerMenu;
+  end;
+
+procedure RegisterContextMenu;
+
+implementation
+
+{ TFSDHistoryProjectsContextMenu }
+
+procedure TFSDHistoryProjectsContextMenu.AddMenu(const Project: IOTAProject;
+                                                 const IdentList: TStrings;
+                                                 const ProjectManagerMenuList: IInterfaceList;
+                                                       IsMultiSelect: Boolean);
+begin
+  if (IdentList.IndexOf(sProjectGroupContainer)) < 0 then
+    Exit;
+
+  ProjectManagerMenuList.Add();
+
+end;
+
+class function TFSDHistoryProjectsContextMenu.New: IOTAProjectMenuItemCreatorNotifier;
+begin
+  REsult := Self.Create;
+end;
+
+{ TFSDHistoryProjectsItemMEnu }
+
+procedure TFSDHistoryProjectsItemMEnu.Execute(const MenuContextList: IInterfaceList);
+begin
+  ShowHistoryProjects;
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetCaption: string;
+begin
+  Result := 'History Projects';
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetChecked: Boolean;
+begin
+  Result := False;
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetEnabled: Boolean;
+begin
+  Result := True;
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetHelpContext: Integer;
+begin
+  Result:= 0;
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetIsMultiSelectable: Boolean;
+begin
+   Result := False;
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetName: string;
+begin
+  Result := Self.ClassName;
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetParent: string;
+begin
+  Result := '';
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetPosition: Integer;
+begin
+  Result := pmmpAddExistingTarget + 100;
+end;
+
+function TFSDHistoryProjectsItemMEnu.GetVerb: string;
+begin
+Result := 'HistoryProjects';
+end;
+
+class function TFSDHistoryProjectsItemMEnu.New: IOTAProjectManagerMenu;
+begin
+  Result := Self.Create;
+end;
+
+function TFSDHistoryProjectsItemMEnu.PostExecute(const MenuContextList: IInterfaceList): Boolean;
+begin
+
+end;
+
+function TFSDHistoryProjectsItemMEnu.PreExecute(const MenuContextList: IInterfaceList): Boolean;
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetCaption(const Value: string);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetChecked(Value: Boolean);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetEnabled(Value: Boolean);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetHelpContext(Value: Integer);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetIsMultiSelectable(Value: Boolean);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetName(const Value: string);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetParent(const Value: string);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetPosition(Value: Integer);
+begin
+
+end;
+
+procedure TFSDHistoryProjectsItemMEnu.SetVerb(const Value: string);
+begin
+
+end;
+
+end.

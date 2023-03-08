@@ -33,12 +33,12 @@ requires
   designide;
 
 contains
-  FSD.HelloWorld.Wizard in 'HelloWorld\FSD.HelloWorld.Wizard.pas',
-  FSD.MainMenu.Wizard in 'MainMenu\FSD.MainMenu.Wizard.pas',
+  FSD.HelloWorld.Wizard in 'FSD.HelloWorld.Wizard.pas',
+  FSD.MainMenu.Wizard in 'FSD.MainMenu.Wizard.pas',
   FSD.Register in 'FSD.Register.pas',
-  FSD.HistoryProjects.Notifier in 'HistoryProjects\FSD.HistoryProjects.Notifier.pas',
-  FSD.HistoryProjects.Forms in 'HistoryProjects\FSD.HistoryProjects.Forms.pas' {FSDHistoryProjectsForms},
-  FSD.HistoryProjects.Binding in 'HistoryProjects\FSD.HistoryProjects.Binding.pas',
+  FSD.HistoryProjects.Notifier in 'FSD.HistoryProjects.Notifier.pas',
+  FSD.HistoryProjects.Forms in 'FSD.HistoryProjects.Forms.pas' {FSDHistoryProjectsForms},
+  FSD.HistoryProjects.Binding in 'FSD.HistoryProjects.Binding.pas',
   FSD.NewProject.Wizard in 'NewProject\FSD.NewProject.Wizard.pas',
   FSD.NewProjects.Forms in 'NewProject\FSD.NewProjects.Forms.pas' {FSDNewProjectForms},
   FSD.NewProject.Creator in 'NewProject\FSD.NewProject.Creator.pas',
@@ -47,7 +47,6 @@ contains
   FSD.NewProject.NewUnit.Component.ConnectionInterfaces in 'NewProject\FSD.NewProject.NewUnit.Component.ConnectionInterfaces.pas',
   FSD.NewProject.NewUnit.Component.ConnectionFiredac in 'NewProject\FSD.NewProject.NewUnit.Component.ConnectionFiredac.pas',
   FSD.NewProject.NewFormMain.Creator in 'NewProject\FSD.NewProject.NewFormMain.Creator.pas',
-  FSD.NewProject.NewFormMain.SourceFile in 'NewProject\FSD.NewProject.NewFormMain.SourceFile.pas',
-  FSD.HistoryProjects.ContextMenu in 'HistoryProjects\FSD.HistoryProjects.ContextMenu.pas';
+  FSD.NewProject.NewFormMain.SourceFile in 'NewProject\FSD.NewProject.NewFormMain.SourceFile.pas';
 
 end.

@@ -21,7 +21,6 @@ object FSDHistoryProjectsForms: TFSDHistoryProjectsForms
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 616
     object edtSearch: TEdit
       Left = 8
       Top = 14
@@ -40,7 +39,5 @@ object FSDHistoryProjectsForms: TFSDHistoryProjectsForms
     ItemHeight = 15
     TabOrder = 1
     OnKeyDown = lstProjectsKeyDown
-    ExplicitWidth = 616
-    ExplicitHeight = 375
   end
 end

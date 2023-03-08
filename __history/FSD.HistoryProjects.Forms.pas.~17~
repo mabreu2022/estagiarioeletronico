@@ -74,7 +74,7 @@ end;
 procedure TFSDHistoryProjectsForms.FormShow(Sender: TObject);
 begin
   //O tema não funciona nessa versão 11.2 , 11.3 tem que ver o que mudou
-  {$IF CompilerVersion >= 32.0}
+  {$IF CompilerVersion >=32.0}
   (BorlandIDEServices as IOTAIDEThemingServices250)
     .RegisterFormClass(TFSDHistoryProjectsForms);
   {$ENDIF}

@@ -152,15 +152,15 @@
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="designide.dcp"/>
-        <DCCReference Include="FSD.HelloWorld.Wizard.pas"/>
-        <DCCReference Include="FSD.MainMenu.Wizard.pas"/>
+        <DCCReference Include="HelloWorld\FSD.HelloWorld.Wizard.pas"/>
+        <DCCReference Include="MainMenu\FSD.MainMenu.Wizard.pas"/>
         <DCCReference Include="FSD.Register.pas"/>
-        <DCCReference Include="FSD.HistoryProjects.Notifier.pas"/>
-        <DCCReference Include="FSD.HistoryProjects.Forms.pas">
+        <DCCReference Include="HistoryProjects\FSD.HistoryProjects.Notifier.pas"/>
+        <DCCReference Include="HistoryProjects\FSD.HistoryProjects.Forms.pas">
             <Form>FSDHistoryProjectsForms</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="FSD.HistoryProjects.Binding.pas"/>
+        <DCCReference Include="HistoryProjects\FSD.HistoryProjects.Binding.pas"/>
         <DCCReference Include="NewProject\FSD.NewProject.Wizard.pas"/>
         <DCCReference Include="NewProject\FSD.NewProjects.Forms.pas">
             <Form>FSDNewProjectForms</Form>
@@ -173,6 +173,7 @@
         <DCCReference Include="NewProject\FSD.NewProject.NewUnit.Component.ConnectionFiredac.pas"/>
         <DCCReference Include="NewProject\FSD.NewProject.NewFormMain.Creator.pas"/>
         <DCCReference Include="NewProject\FSD.NewProject.NewFormMain.SourceFile.pas"/>
+        <DCCReference Include="HistoryProjects\FSD.HistoryProjects.ContextMenu.pas"/>
         <RcItem Include="Resources\mysql.bmp">
             <ResourceType>BITMAP</ResourceType>
             <ResourceId>mysql</ResourceId>

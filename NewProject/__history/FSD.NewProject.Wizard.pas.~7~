@@ -80,7 +80,7 @@ end;
 
 function TFSDNewRepositoryWizard.GetPage: string;
 begin
-  Result := 'Estagiário Eletrônico';
+  Result := 'Formação Sênior Developer';
 end;
 
 function TFSDNewRepositoryWizard.GetState: TWizardState;
