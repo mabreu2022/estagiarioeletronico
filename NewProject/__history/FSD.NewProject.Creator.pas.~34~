@@ -7,7 +7,11 @@ Uses
   PlatformAPI,
   DCCStrs,
   System.SysUtils,
-  System.Classes;
+  System.Classes,
+  FSD.NewProject.NewUnit.Behaviors,
+  FSD.NewProject.NewUnit.Component.ConnectionInterfaces,
+  FSD.NewProject.NewUnit.Component.ConnectionFiredac,
+  FSD.NewProject.NewFormMain.Creator;
 
 type TFSDNewProjectCreator = class(TNotifierObject, IOTACreator,
                                                     IOTAProjectCreator,
@@ -21,83 +25,28 @@ type TFSDNewProjectCreator = class(TNotifierObject, IOTACreator,
   protected
 
       //IOTACREATOR
-
-      /// Return a string representing the default creator type in which to augment.
-      /// See the definitions of sApplication, sConsole, sLibrary and
-      /// sPackage, etc.. above.  Return an empty string indicating that this
-      /// creator will provide *all* information
-      /// </summary>
       function GetCreatorType: string;
-      /// <summary>
-      /// Return False if this is a new module
-      /// </summary>
       function GetExisting: Boolean;
-      /// <summary>
-      /// Return the File system IDString that this module uses for reading/writing
-      /// </summary>
       function GetFileSystem: string;
-      /// <summary>
-      /// Return the Owning module, if one exists (for a project module, this would
-      /// be a project; for a project this is a project group)
-      /// </summary>
       function GetOwner: IOTAModule;
-      /// <summary>
-      /// Return true, if this item is to be marked as un-named.  This will force the
-      /// save as dialog to appear the first time the user saves.
-      /// </summary>
       function GetUnnamed: Boolean;
 
 
       // IOTAPROJECTCREATOR
-
-      /// Return the project filename. NOTE: This *must* be a fully qualified file name.
-      /// </summary>
       function GetFileName: string;
-      /// <summary>
-      /// Deprecated!! Return the option file name (C++ .bpr, .bpk, etc...)
-      /// </summary>
       function GetOptionFileName: string; deprecated;
-      /// <summary>
-      /// Return True to show the source
-      /// </summary>
       function GetShowSource: Boolean;
-      /// <summary>
-      /// Deprecated!! Called to create a new default module for this project.
-      /// Please implement and use the method on IOTAProjectCreator50.
-      /// </summary>
       procedure NewDefaultModule; deprecated;
-      /// <summary>
-      /// Deprecated!! Create and return the project option source. (C++)
-      /// </summary>
       function NewOptionSource(const ProjectName: string): IOTAFile; deprecated;
-      /// <summary>
-      /// Called to indicate when to create/modify the project resource file
-      /// </summary>
       procedure NewProjectResource(const Project: IOTAProject);
-      /// <summary>
-      /// Create and return the Project source file
-      /// </summary>
       function NewProjectSource(const ProjectName: string): IOTAFile;
-
       procedure NewDefaultProjectModule(const Project: IOTAProject);
-
       function GetProjectPersonality: string;
 
-      /// Return the framework type string for the framework this application supports
-      /// </summary>
+
       function GetFrameworkType: string;
-      /// <summary>
-      /// Return the platform keys for the platforms this wizard selects
-      /// </summary>
       function GetPlatforms: TArray<string>;
-      /// <summary>
-      /// Return the project's &quot;preferred&quot; platform - the one that will be explicitly supported
-      /// when the project is created
-      /// </summary>
       function GetPreferredPlatform: string;
-      /// <summary>
-      /// Set up any initial options
-      /// </summary>
       procedure SetInitialOptions(const NewProject: IOTAProject);
 
       public
@@ -232,6 +181,13 @@ verInfoKeys := 'CompanyName=;FileDescription=$(MSBuildProjectName);' +
   build.SetValue(sExeOutput, Self.FPath);
   build.SetValue('VerInfo_IncludeVerInfo', 'true');
   build.SetValue('VerInfo_Keys', verInfoKeys);
+
+  CreateUnitBehaviors(FPath, FNameSpace);
+  CreateUnitComponentConnectionInterfaces(FPath, FNameSpace);
+  CreateUnitComponentConnectionFiredac(FPath, FNameSpace);
+
+
+  TFSDNewProjectNewFormMainCreator.New(FPath, FNameSpace);
 
 end;
 
