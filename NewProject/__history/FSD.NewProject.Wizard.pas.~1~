@@ -1,0 +1,36 @@
+unit FSD.NewProject.Wizard;
+
+interface
+
+uses
+  ToolsAPI,
+  System.SysUtils,
+  System.Classes,
+  WinApi.Windows,
+  VCL.Dialogs;
+
+type TFSDNewRepositoryWizard = class(TNotifierObject, IOTAWizard,
+                                                      IOTAProjectWizard,
+                                                      IOTARepositoryWizard)
+  protected
+     function GetIDString: string;
+     function GetName: string;
+     function GetState: TWizardState;
+
+     { Launh the Addin }
+     procedure Execute;
+     function GetAuthor: string;
+     function GetComment: string;
+     function GetPage: string;
+     { Handle to an Icon }
+     function GetGlyph: Cardinal;
+
+  public
+    class function New : IOTAWizard;
+
+
+end
+
+implementation
+
+end.

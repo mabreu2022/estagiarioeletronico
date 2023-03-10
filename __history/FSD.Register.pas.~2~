@@ -1,0 +1,19 @@
+unit FSD.Register;
+
+interface
+
+uses
+  ToolsAPI,
+  FSD.HelloWorld.Wizard,
+  FSD.MainMenu.Wizard;
+
+  procedure Register;
+
+implementation
+
+procedure Register;
+begin
+
+end;
+
+end.

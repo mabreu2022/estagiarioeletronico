@@ -1,0 +1,35 @@
+unit FSD.NewProject.NewUnit.Behaviors;
+
+interface
+
+Uses
+  ToolsAPI,
+  System.SysUtils,
+  System.Classes;
+
+procedure CreateUnitBehaviors(ProjectPath, NameSpace : string);
+
+
+implementation
+
+procedure CreateUnitBehaviors(ProjectPath, NameSpace : string);
+var
+ unitName: string;
+ unitPath: string;
+ unitFileName: string;
+begin
+  unitPath := ProjectPath  + 'src\Model\Behaviors\';
+  unitName := NameSpace + '.Model.Behaviors';
+  unitFileName := unitPath + unitName + '.pas';
+
+  ForceDirectories(unitPath);
+
+  with TStringList.Create do
+  try
+    Add('unit REfactor.Model.Behaviors;');
+  finally
+    Free;
+  end;
+end;
+
+end.

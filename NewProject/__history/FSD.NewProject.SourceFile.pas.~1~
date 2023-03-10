@@ -1,0 +1,24 @@
+unit FSD.NewProject.SourceFile;
+
+interface
+
+uses
+  ToolsAPI,
+  System.SysUtils,
+  System.Classes;
+
+type  TFSDNewProjectSourceFile = class(TNotifierObject, IOTAFILE)
+
+  private
+    FPRojectName: string;
+
+  protected
+     function GetSource: string;
+     function GetAge: TDateTime;
+
+end;
+
+
+implementation
+
+end.

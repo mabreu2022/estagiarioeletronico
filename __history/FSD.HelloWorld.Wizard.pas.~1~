@@ -1,0 +1,10 @@
+unit FSD.HelloWorld.Wizard;
+
+interface
+
+uses
+  ToolsApi;
+
+implementation
+
+end.
