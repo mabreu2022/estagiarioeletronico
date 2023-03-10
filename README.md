@@ -1,12 +1,33 @@
 # Estagiario Eletrônico - Versão Free
 
-Projeto que adiciona uma opção no menu do DELPHI  
-Adiciona menu : Livros - Com links para compras ou PDFs existentes  
-Adiciona Ferramentas para Downloads com links das principais para os sites dos fabricantes  
-Adiciona Blogs - Apontando para os principais Blogs sobre Delphi Existentes  
-Adiciona Grupos do FaceBook relacionados a Delphi  
-Adiciona Cursos - Direcionando para as principais plataformas de cursos existentes  
-Adiciona Youtube - Aponta para alguns vídeos sobre Delphi ou Banco de dados relacionados   
-Adciona Utilitários - aponta para Abrir as principais ferramentas de programação instaladas  
-Adiciona Githubs dos principais componentes gratuitos para uso com Delphi
+Projeto que adiciona uma opção no menu do DELPHI chamada Estagiário Eletrônico  
 
+**Instalação**  
+
+1-Crie uma pasta no seu Windows para Clonas a Branch do Estagiário Eletrônico.  
+2-Abra o projeto no seu Delphi e clique com o botão direto do mouse e clique em Install
+
+![Exemplo de imagem](/Imagens/01.png)
+
+![Instalação](/Imagens/Instalacaoo02.png)
+
+
+
+1. Adiciona menu : Livros - Com links para compras ou PDFs existentes  
+2. Adiciona Ferramentas para Downloads com links das principais para os sites dos fabricantes  
+3. Adiciona Blogs - Apontando para os principais Blogs sobre Delphi Existentes  
+4. Adiciona Grupos do FaceBook relacionados a Delphi  
+5. Adiciona Cursos - Direcionando para as principais plataformas de cursos existentes  
+6. Adiciona Youtube - Aponta para alguns vídeos sobre Delphi ou Banco de dados relacionados   
+7. Adciona Utilitários - aponta para Abrir as principais ferramentas de programação instaladas  
+8. Adiciona Githubs dos principais componentes gratuitos para uso com Delphi
+
+**Ao terminar a instalação do mesmo teremos esse menu na IDE:** 
+
+![Instalação](/Imagens/04.png)
+
+**Desinstalação do Estagiário Eletrônico**  
+
+1-Clique no Menu da IDE do Delphi: 
+
+![Exemplo de imagem](/Imagens/Desinstalacao00.png)
