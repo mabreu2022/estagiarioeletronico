@@ -64,6 +64,8 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickNutror(Sender: TOBject);
      procedure OnClickNovoEAD(Sender: TObject);
      procedure OnClickDevPoint(Sender: TObject);
+     procedure OnclickGitHubBozon(Sender: TObject);
+     procedure OnclickPostGresBozon(Sender: TObject);
 
      {YouTube}
      procedure OnClickEmbarcaderoBrasil(Sender: TObject);
@@ -357,6 +359,9 @@ begin
   CreateSubMenu(itemCursos, 'Dev Point - 99Coders', 'imDevPoint', OnClickDevPoint);
   CreateSubMenu(itemCursos, 'Curso OTA', 'imOTA', OnClickOTA);
   CreateSubMenu(itemCursos, 'Delphi Basics', 'imDelphiBasics', OnclickDelphiBasics);
+  CreateSubMenu(itemCursos, 'Curso GitHub Bozon Treinamentos', 'imGitHubBozon', OnclickGitHubBozon);
+  CreateSubMenu(itemCursos, 'Curso de Postgres Bozon Treinamentos', 'imPostGresBozon', OnclickPostGresBozon);
+
 
   {YouTube}
   itemYouTube:= CreateSubMenu(itemFormacao, 'YouTube', 'imYouTube', nil);
@@ -543,6 +548,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickPostGres(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'C:\Program Files\pgAdmin 4\v6\runtime\pgAdmin4.exe', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnclickPostGresBozon(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.youtube.com/playlist?list=PLucm8g_ezqNoAkYKXN_zWupyH6hQCAwxY', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickPostman(Sender: TObject);
@@ -819,6 +829,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickForumDelphi(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://conectsolutionsti.com.br/Upload/', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnclickGitHubBozon(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.youtube.com/watch?v=YnVnFanIAzU&list=PLucm8g_ezqNq0dOgug6paAkH0AQSJPlIe', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickGitHubCurso(Sender: TObject);
