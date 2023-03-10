@@ -16,6 +16,12 @@ E não é só isso: a versão paga também oferece a possibilidade de venda de c
 
 Com o Estagiário Eletrônico, você terá todas as facilidades necessárias para aprimorar seu trabalho como programador Delphi. E com a versão paga, você terá ainda mais recursos para impulsionar seus negócios e fazer ainda mais sucesso na comunidade Delphi. Adquira agora mesmo a versão paga do Estagiário Eletrônico e aproveite todas as facilidades que ela oferece!
 
+Além das facilidades já mencionadas, a versão paga do Estagiário Eletrônico conta com uma ferramenta poderosa de análise do código compilado. Com essa ferramenta, você poderá identificar rapidamente os Hints e Warnings presentes em seu código, separando por tipo e apresentando uma descrição clara do que está causando o problema.
+
+E não é só isso: a ferramenta também apresenta o nome do arquivo-fonte e a linha onde o problema ocorre, facilitando ainda mais a correção do código. Com essa opção, você poderá deixar seu código mais limpo e livre de problemas, melhorando a qualidade de seu trabalho como programador Delphi.
+
+Não perca mais tempo lidando com problemas em seu código. Adquira agora mesmo a versão paga do Estagiário Eletrônico e aproveite todas as facilidades que ela oferece, incluindo a poderosa ferramenta de análise do código compilado!
+
 Não perca mais tempo procurando soluções em vários lugares. Adquira o Estagiário Eletrônico agora e torne sua vida como programador Delphi muito mais fácil!
 
 
