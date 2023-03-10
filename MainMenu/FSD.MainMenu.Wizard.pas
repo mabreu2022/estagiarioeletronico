@@ -294,31 +294,6 @@ begin
   CreateSubMenu(itemFormacao, 'Histórico Projetos', 'imHistoricoProjetos', OnclickMenuHistoryProjects);
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
 
-
-  {Loja - Abrir um formulário com contato do desenvolvedor e dados de PIX?Quanto cobrar pelo anuncio? R$30,00/mês, criar banco com nome
-  do sistema, nome do contato, telefone/WhatsApp, e-mail, valores, e data inicio anuncio final do anuncio , ativo s/n no mysql da locaweb
-  distribuir esse OTA de gratis para o Grupo e outros Grupos de Delphi
-
-  Seria uma única opção de menu chamada Loja onde carregaria um Formulário que mostraria os itens anunciados ativos via pesquisa no Banco
-   e mostraria os frames com cantos arrendondados com uma foto, titulo, mini descrição , valor e dados do PIX - Esse Pix passaria para a conta da Conect
-   a qual compraria os fontes para entrega ao cliente. Precisaria pegar nome do cliente, e-mail, telefone/WhatsApp
-
-  }
-
-//  itemLoja := CreateSubMenu(itemFormacao, 'Fontes de Sistemas para Comprar', 'imLoja', nil);
-//  CreateSubMenu(itemLoja, 'Sistema Comercial CoreSmart', 'imLojaCoreSmart', OnClickCoreSmart);
-//  CreateSubMenu(itemLoja, 'Plataforma Web Controle de Licenças', 'imPlataformaWebControleLicencas', OnClickPlataformaWebControleLicencas);
-//  CreateSubMenu(itemLoja, 'Banco de dados de supoermercado', 'imBancodeDadosSupermercado', OnClickBancodeDadosSupermercado);
-//  CreateSubMenu(itemLoja, 'Sistema CoreFiscal', 'imCoreFiscal', OnClickCoreFiscal);
-//  CreateSubMenu(itemLoja, 'Sistema Painel de Chamadas de Senhas', 'imSistemaPaineldeSenhas', OnClickSistemaPaineldeSenhas);
-//  CreateSubMenu(itemLoja, 'Sistema Comercial CoreFood', 'imSistemaCoreFood', OnClickSistemaCoreFood);
-//  CreateSubMenu(itemLoja, 'ATLAS - Central de Muilti Atendimento', 'imAtlasMulktiAtendimento', OnClickAtlasMulktiAtendimento);
-//  CreateSubMenu(itemLoja, 'Sistema de Pizaria Modile e Desktop', 'imSistemaPizzariaMobileDesktop', OnClickSistemaPizzariaMobileDesktop);
-
-  {Vagas}
-//  itemVagas := CreateSubMenu(itemFormacao, 'Vagas', 'imVagas', nil);
-//  CreateSubMenu(itemVagas, 'Vagas Programador Delphi no Linkedin', 'imVagasDelphi', OnClickVagasDelphi);
-
   {Livros}
   itemLivros := CreateSubMenu(itemFormacao, 'Livros de Delphi (Compras)', 'imLivros', nil);
   CreateSubMenu(itemLivros, 'Delphi para Android e iOS: Desenvolvendo Aplicativos Móveis', 'imLivrosDelphiAndroid', OnClickLivroDelphiAndroid);
