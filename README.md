@@ -1,6 +1,18 @@
 # Estagiario Eletrônico - Versão Free
 
-Projeto que adiciona uma opção no menu do DELPHI chamada Estagiário Eletrônico  
+Apresentando o Estagiário Eletrônico - a ferramenta indispensável para programadores Delphi!
+
+Se você é um programador Delphi em busca de mais facilidades em seu dia a dia, o Estagiário Eletrônico é a solução perfeita para você. Com a instalação simples diretamente na IDE do Delphi, você terá acesso a uma ampla gama de ferramentas de bancos de dados, livros e GitHub de componentes de uso da comunidade Delphi.
+
+Com o Estagiário Eletrônico, você não precisará mais sair da IDE do Delphi para acessar ferramentas de bancos de dados. Tudo estará à sua disposição com apenas um clique. Além disso, você terá links diretos para compra de livros na web, o que significa que você poderá expandir seus conhecimentos sem precisar sair do ambiente de desenvolvimento.
+
+O Estagiário Eletrônico também disponibiliza links para os principais componentes de uso da comunidade Delphi, hospedados no GitHub. Você terá acesso aos melhores recursos disponíveis para aprimorar suas habilidades como programador Delphi.
+
+A melhor parte é que a versão básica do Estagiário Eletrônico é totalmente gratuita para download no GitHub. Mas se você quiser ter acesso a ainda mais recursos, poderá escolher a versão paga, que oferece uma assinatura mensal para acessar fontes de programadores via e-commerce.
+
+Não perca mais tempo procurando soluções em vários lugares. Adquira o Estagiário Eletrônico agora e torne sua vida como programador Delphi muito mais fácil!
+
+
 
 **Instalação**  
 
