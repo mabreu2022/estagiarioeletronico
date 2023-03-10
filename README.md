@@ -1,6 +1,6 @@
 # Estagiario Eletrônico - Versão Free
 
-Apresentando o Estagiário Eletrônico - a ferramenta indispensável para programadores Delphi!
+Apresentando o Estagiário Eletrônico - a ferramenta indispensável para programadores Delphi, desenvolvida por Mauricio Abreu da empresa Conect Solutions!
 
 Se você é um programador Delphi em busca de mais facilidades em seu dia a dia, o Estagiário Eletrônico é a solução perfeita para você. Com a instalação simples diretamente na IDE do Delphi, você terá acesso a uma ampla gama de ferramentas de bancos de dados, livros e GitHub de componentes de uso da comunidade Delphi.
 
@@ -9,6 +9,12 @@ Com o Estagiário Eletrônico, você não precisará mais sair da IDE do Delphi 
 O Estagiário Eletrônico também disponibiliza links para os principais componentes de uso da comunidade Delphi, hospedados no GitHub. Você terá acesso aos melhores recursos disponíveis para aprimorar suas habilidades como programador Delphi.
 
 A melhor parte é que a versão básica do Estagiário Eletrônico é totalmente gratuita para download no GitHub. Mas se você quiser ter acesso a ainda mais recursos, poderá escolher a versão paga, que oferece uma assinatura mensal para acessar fontes de programadores via e-commerce.
+
+Além das facilidades da versão gratuita, a versão paga do Estagiário Eletrônico oferece ainda mais benefícios para os programadores Delphi. Com essa versão, você poderá anunciar seus códigos fontes de sistemas para venda, bem como seus livros em formato PDF ou links das lojas para a compra dos livros impressos.
+
+E não é só isso: a versão paga também oferece a possibilidade de venda de cursos, tudo isso com a facilidade de pagamentos via PIX. Com essa opção de e-commerce, você poderá vender seus produtos diretamente aos clientes, com o envio automático dos dados dos clientes para o envio dos produtos.
+
+Com o Estagiário Eletrônico, você terá todas as facilidades necessárias para aprimorar seu trabalho como programador Delphi. E com a versão paga, você terá ainda mais recursos para impulsionar seus negócios e fazer ainda mais sucesso na comunidade Delphi. Adquira agora mesmo a versão paga do Estagiário Eletrônico e aproveite todas as facilidades que ela oferece!
 
 Não perca mais tempo procurando soluções em vários lugares. Adquira o Estagiário Eletrônico agora e torne sua vida como programador Delphi muito mais fácil!
 
