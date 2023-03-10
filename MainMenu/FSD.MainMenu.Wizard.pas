@@ -129,6 +129,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickFerramentasNavicat(Sender: TObject);
      procedure OnClickFerramentasIdeFixPack(Sender: TObject);
      procedure OnClickFerramentasToolsFree(Sender: TObject);
+     procedure OnClickFerramentasSiteGitIgnore(Sender: TObject);
 
      {Grupos de Facebook}
      procedure OnClickFacebookDelphiTips(Sender: TObject);
@@ -332,11 +333,12 @@ begin
   CreateSubMenu(itemFerramentas, 'SQLite Expert', 'imFerramentasSQLiteExpert', OnClickFerramentasSQLiteExpert);
   CreateSubMenu(itemFerramentas, 'Inno Setup', 'imFerramentasInnoSetup', OnClickFerramentasInnoSetup);
   CreateSubMenu(itemFerramentas, 'CNPAck', 'imFerramentasCNPack', OnClickFerramentasCNPack);
-  CreateSubMenu(itemFerramentas, 'Inno SEtup Script Studio', 'imFerramentasInnoScriptStudio', OnClickFerramentasInnoScriptStudio);
+  CreateSubMenu(itemFerramentas, 'Inno Setup Script Studio', 'imFerramentasInnoScriptStudio', OnClickFerramentasInnoScriptStudio);
   CreateSubMenu(itemFerramentas, 'Insomnia', 'imFerramentasInsomnia', OnClickFerramentasInsomnia);
   CreateSubMenu(itemFerramentas, 'Navicat', 'imFerramentasNavicat', OnClickFerramentasNavicat);
   CreateSubMenu(itemFerramentas, 'Ide Fix Pack e DDevExtensions', 'imFerramentasIdeFixPack', OnClickFerramentasIdeFixPack);
   CreateSubMenu(itemFerramentas, 'Ferramentas free da Embarcadero', 'imFerramentasToolsFree', OnClickFerramentasToolsFree);
+  CreateSubMenu(itemFerramentas, 'Site que gera .GitIgnore', 'imFerramentasSiteGitIgnore', OnClickFerramentasSiteGitIgnore);
 
   {Blogs}
   itemBlogs := CreateSubMenu(itemFormacao, 'Blogs', 'imBlogs', nil);
@@ -784,6 +786,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickFerramentasNavicat(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://navicat.com/en/products', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickFerramentasSiteGitIgnore(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.toptal.com/developers/gitignore', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickFerramentasSQLiteExpert(Sender: TObject);
