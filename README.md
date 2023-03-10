@@ -24,7 +24,15 @@ Não perca mais tempo lidando com problemas em seu código. Adquira agora mesmo 
 
 Não perca mais tempo procurando soluções em vários lugares. Adquira o Estagiário Eletrônico agora e torne sua vida como programador Delphi muito mais fácil!
 
+**Licenciamento**
 
+É importante lembrar que o licenciamento da versão gratuita do Estagiário Eletrônico está sujeito aos termos da EULA (End-User License Agreement). Essa é uma garantia de que você estará utilizando o produto de acordo com as regras estabelecidas pela Conect Solutions e que respeitará os direitos de propriedade intelectual da empresa.
+
+Ao baixar e utilizar a versão gratuita do Estagiário Eletrônico, você estará concordando com os termos da EULA e se comprometendo a utilizar o produto somente de acordo com as diretrizes estabelecidas pela Conect Solutions.
+
+Não deixe de conferir os termos da EULA antes de utilizar o Estagiário Eletrônico. Dessa forma, você terá a garantia de estar utilizando o produto de maneira legal e dentro das normas estabelecidas.
+
+[Leia o EULA do Estagiário Eletrônico](https://conectsolutionsti.com.br/EULA.html)
 
 **Instalação**  
 
