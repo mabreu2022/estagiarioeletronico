@@ -20,7 +20,7 @@ Além das facilidades já mencionadas, a versão paga do Estagiário Eletrônico
 
 E não é só isso: a ferramenta também apresenta o nome do arquivo-fonte e a linha onde o problema ocorre, facilitando ainda mais a correção do código. Com essa opção, você poderá deixar seu código mais limpo e livre de problemas, melhorando a qualidade de seu trabalho como programador Delphi.
 
-Além de todas as facilidades já mencionadas, a versão gratuita do Estagiário Eletrônico conta também com um Wizard que permite criar facilmente um exemplo MVC (Model-View-Controller) em Delphi. Com essa ferramenta, você poderá criar um novo projeto MVC com apenas alguns cliques, economizando tempo e esforço no desenvolvimento de aplicações.
+Além de todas as facilidades já mencionadas, a versão gratuita do Estagiário Eletrônico conta também com um Wizard que permite criar facilmente um exemplo MVC (Model-View-Controller) em Delphi. Com essa ferramenta, você poderá criar um novo projeto MVC com apenas alguns cliques, economizando tempo e esforço no desenvolvimento de aplicações. **OBS.: Ainda em implementação será liberada em breve**
 
 O exemplo MVC criado com o Wizard inclui os principais componentes e classes necessários para a implementação do padrão MVC em Delphi, facilitando ainda mais o processo de desenvolvimento. E o melhor de tudo: essa ferramenta está disponível gratuitamente para todos os usuários da versão free do Estagiário Eletrônico.
 
