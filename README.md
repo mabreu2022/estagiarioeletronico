@@ -30,4 +30,16 @@ Projeto que adiciona uma opção no menu do DELPHI chamada Estagiário Eletrôni
 
 1-Clique no Menu da IDE do Delphi: 
 
-![Exemplo de imagem](/Imagens/Desinstalacao00.png)
+![Exemplo de imagem](/Imagens/Desinstalacao00.png)  
+
+Vai abrir essa janela com a bpl instalada:
+
+![Exemplo de imagem](/Imagens/Desistalacao01.png)  
+
+Desmarque e Salve  
+
+![Exemplo de imagem](/Imagens/Desistalacao02.png)  
+
+Feche a IDE do Delphiu e carregue novamente e o Estagiário Eletrônico não irá mais aparecer nas opções de menu.
+
+A Versão comercial terá opções de e-commerce, saiba mais [entre em contato conosco](mailto:comercial@conectsolutionsti.com.br)
