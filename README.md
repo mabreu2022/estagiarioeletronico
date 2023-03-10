@@ -43,3 +43,6 @@ Desmarque e Salve
 Feche a IDE do Delphiu e carregue novamente e o Estagiário Eletrônico não irá mais aparecer nas opções de menu.
 
 A Versão comercial terá opções de e-commerce, saiba mais [entre em contato conosco](mailto:comercial@conectsolutionsti.com.br)
+
+[Visite o nosso site](https://conectsolutionsti.com.br)
+
