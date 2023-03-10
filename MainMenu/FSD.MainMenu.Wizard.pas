@@ -4,6 +4,7 @@ interface
 
 uses
   ToolsAPI,
+  Winapi.Windows,
   System.SysUtils,
   System.Classes,
   Winapi.ShellAPI,
@@ -28,6 +29,9 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      FImageIbExpert: integer;
      FSQLServerManagerStudio: integer;
      FForumDelphi: integer;
+     FLingua: string;
+
+     function GetWindowsDefaultLanguage: string;
 
      procedure CreateMenu;
 
@@ -163,6 +167,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
     procedure Execute;
 
   public
+
   constructor create;
 end;
 
@@ -277,6 +282,8 @@ var
   itemLivros: TMenuItem;
   itemLoja: TMenuItem;
   itemVagas: TMenuItem;
+
+  Lingua: string;
 begin
   menu := (BorlandIDEServices as INTAServices).MainMenu;
   menuName := 'Informacao';
@@ -294,11 +301,20 @@ begin
   CreateSubMenu(itemFormacao, 'Histórico Projetos', 'imHistoricoProjetos', OnclickMenuHistoryProjects);
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
 
-  {Livros}
-  itemLivros := CreateSubMenu(itemFormacao, 'Livros de Delphi (Compras)', 'imLivros', nil);
-  CreateSubMenu(itemLivros, 'Delphi para Android e iOS: Desenvolvendo Aplicativos Móveis', 'imLivrosDelphiAndroid', OnClickLivroDelphiAndroid);
-  CreateSubMenu(itemLivros, 'Object Pascal Para Delphi', 'imLivrosObjectPascal', OnClickLivroObjectPascal);
-
+  {Livros} //Recurso de Linguagem ainda em testes.
+  FLingua:= GetWindowsDefaultLanguage;
+  if FLingua <> 'Português(Brasil)' then
+  begin
+    itemLivros := CreateSubMenu(itemFormacao, 'Livros de Delphi (Compras)', 'imLivros', nil);
+    CreateSubMenu(itemLivros, 'Delphi para Android e iOS: Desenvolvendo Aplicativos Móveis', 'imLivrosDelphiAndroid', OnClickLivroDelphiAndroid);
+    CreateSubMenu(itemLivros, 'Object Pascal Para Delphi', 'imLivrosObjectPascal', OnClickLivroObjectPascal);
+  end
+  else
+  begin
+    itemLivros := CreateSubMenu(itemFormacao, 'Books Delphi (Buy)', 'imLivros', nil);
+    CreateSubMenu(itemLivros, 'Delphi for Android and iOS: Desenvolvendo Aplicativos Móveis', 'imLivrosDelphiAndroid', OnClickLivroDelphiAndroid);
+    CreateSubMenu(itemLivros, 'Object Pascal for Delphi', 'imLivrosObjectPascal', OnClickLivroObjectPascal);
+  end;
 
   {Ferramentas para Download}
   itemFerramentas := CreateSubMenu(itemFormacao, 'Ferramentas para Download', 'imFerramentas', nil);
@@ -444,6 +460,18 @@ end;
 
 function TFSDMainMenuWizard.GetState: TWizardState;
 begin
+
+end;
+
+
+function TFSDMainMenuWizard.GetWindowsDefaultLanguage: string;
+var
+  LangID: WORD;
+  Buffer: array [0..255] of Char;
+begin
+  LangID := GetUserDefaultLangID;
+  GetLocaleInfo(LOCALE_USER_DEFAULT, LOCALE_SLANGUAGE, Buffer, SizeOf(Buffer));
+  Result := Buffer;
 
 end;
 
