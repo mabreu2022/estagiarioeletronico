@@ -46,3 +46,5 @@ A Versão comercial terá opções de e-commerce, saiba mais [entre em contato c
 
 [Visite o nosso site](https://conectsolutionsti.com.br)
 
+[Entre em contato via WhatsApp](https://api.whatsapp.com/send?phone=5511942498529)
+
