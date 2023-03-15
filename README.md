@@ -85,7 +85,7 @@ A Versão comercial terá opções de e-commerce, saiba mais [entre em contato c
 
 [Entre em contato via WhatsApp](https://api.whatsapp.com/send?phone=5511942498529)  
 
-Gostou do projeto envie uma doação por PIX de qualquer valor para:  
+Gostou do projeto envie uma doação por PIX de qualquer valor para:  Conect Solutions
 
 ![Exemplo de imagem](/Imagens/PixConectSolutionsDoacao.bmp)  
 
