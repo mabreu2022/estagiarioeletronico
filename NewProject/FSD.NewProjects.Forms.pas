@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
   TFSDNewProjectForms = class(TForm)
@@ -15,6 +15,8 @@ type
     Label2: TLabel;
     Label3: TLabel;
     btnCriar: TButton;
+    Image1: TImage;
+    Label4: TLabel;
     procedure FormShow(Sender: TObject);
     procedure btnCriarClick(Sender: TObject);
   private
