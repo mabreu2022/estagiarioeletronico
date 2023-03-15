@@ -37,6 +37,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
 
      procedure OnClickNovoWizard(Sender: TObject);
      procedure OnClickDocWiki(Sender: TObject);
+     procedure OnClickLoja(Sender: TObject);
      procedure OnClickMenuHistoryProjects(Sender: TObject);
 
      {Vagas}
@@ -302,6 +303,7 @@ begin
  // CreateSubMenu(itemFormacao, 'Novo Wirzard', 'imNovoWizard', OnClickNovoWizard);
   CreateSubMenu(itemFormacao, 'Histórico Projetos', 'imHistoricoProjetos', OnclickMenuHistoryProjects);
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
+  CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
 
   {Livros} //Recurso de Linguagem ainda em testes.
   FLingua:= GetWindowsDefaultLanguage;
@@ -498,6 +500,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickLivroObjectPascal(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.amazon.com.br/Object-Pascal-Delphi-Israel-Avillano/dp/8573938323/ref=sr_1_2?keywords=delphi+programa%C3%A7%C3%A3o&qid=1675782875&sprefix=Delphi+programa%2Caps%2C213&sr=8-2', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickLoja(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://localhost:8077', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickMenuHistoryProjects(Sender: TObject);
