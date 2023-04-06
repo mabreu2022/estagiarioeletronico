@@ -31,8 +31,7 @@ Não perca mais tempo lidando com problemas em seu código. Adquira agora mesmo 
 
 **Licenciamento**
 
-É importante lembrar que o licenciamento da versão gratuita do Estagiário Eletrônico está MIT License. Essa é uma garantia de que você estará utilizando o produto de acordo com as regras estabelecidas pela Conect Solutions e que respeitará os direitos de propriedade intelectual da empresa.
-
+É importante lembrar que o licenciamento da versão gratuita do Estagiário Eletrônico está sob MIT License. 
 
 [Leia o MIT do Estagiário Eletrônico](https://conectsolutionsti.com.br/Mit.html)
 
