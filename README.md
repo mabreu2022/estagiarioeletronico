@@ -1,5 +1,7 @@
 # Estagiario Eletrônico - Versão Free
 
+![Instalação](/Imagens/EstagiarioEletronicoLogo.jpeg)
+
 Apresentando o Estagiário Eletrônico - a ferramenta indispensável para programadores Delphi, desenvolvida por Mauricio Abreu da empresa Conect Solutions!
 
 Se você é um programador Delphi em busca de mais facilidades em seu dia a dia, o Estagiário Eletrônico é a solução perfeita para você. Com a instalação simples diretamente na IDE do Delphi, você terá acesso a uma ampla gama de ferramentas de bancos de dados, livros e GitHub de componentes de uso da comunidade Delphi.
