@@ -56,7 +56,7 @@ implementation
 
 procedure RegisterContextMenuHistoryProjects;
 begin
-  (BorlandIDEServices as IOTAProjectManager)
+  index:= (BorlandIDEServices as IOTAProjectManager)
      .AddMenuItemCreatorNotifier(TFSDHistoryProjectsContextMenu.New);
 end;
 
@@ -128,7 +128,7 @@ end;
 
 function TFSDHistoryProjectsItemMEnu.GetVerb: string;
 begin
-Result := 'HistoryProjects';
+  Result := 'HistoryProjects';
 end;
 
 class function TFSDHistoryProjectsItemMEnu.New: IOTAProjectManagerMenu;

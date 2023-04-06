@@ -123,6 +123,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickBlogRoadToDelphi(Sender: TObject);
      procedure OnClickBlogLandgrafDev(Sender: TObject);
      procedure OnClickBlogStephenBalls(Sender: TObject);
+     procedure OnClickBlogKonopka(Sender: TObject);
 
      {Ferramentas para Download}
      procedure OnClickFerramentasIbExpert(Sender: TObject);
@@ -185,7 +186,7 @@ end;
 
 { TFSDMainMenuWizard }
 
-procedure TFSDMainMenuWizard.AddImageToImageList;
+procedure TFSDMainMenuWizard.AddImageToImageList;  //Foi criada uma variável para cada imagem e nnão deveria
 var
   bitmap: TBitMap;
 begin
@@ -303,7 +304,7 @@ begin
  // CreateSubMenu(itemFormacao, 'Novo Wirzard', 'imNovoWizard', OnClickNovoWizard);
   CreateSubMenu(itemFormacao, 'Histórico Projetos', 'imHistoricoProjetos', OnclickMenuHistoryProjects);
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
-  CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
+  //CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
 
   {Livros} //Recurso de Linguagem ainda em testes.
   FLingua:= GetWindowsDefaultLanguage;
@@ -346,6 +347,7 @@ begin
   CreateSubMenu(itemBlogs, 'The Road to Delphi', 'imBlogRoadToDelphi', OnClickBlogRoadToDelphi);
   CreateSubMenu(itemBlogs, 'Landrgraf.Dev', 'imBlogLandgrafDev', OnClickBlogLandgrafDev);
   CreateSubMenu(itemBlogs, 'Stephen Balls Technical Blog', 'imBlogStephenBalls', OnClickBlogStephenBalls);
+  CreateSubMenu(itemBlogs, 'Ray Knopka Blog', 'imKonopka', OnClickBlogKonopka);
 
 
   {Grupos FaceBook - Delphi}
@@ -448,6 +450,7 @@ begin
 
 
   AParent.Add(Result);
+
 end;
 
 procedure TFSDMainMenuWizard.Execute;
@@ -467,7 +470,7 @@ end;
 
 function TFSDMainMenuWizard.GetState: TWizardState;
 begin
-
+  result := [wsEnabled];
 end;
 
 
@@ -600,6 +603,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickBlogEmbarcadero(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://blogs.embarcadero.com/', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickBlogKonopka(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://delphibydesign.com/', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickBlogLandgrafDev(Sender: TObject);
@@ -855,7 +863,7 @@ end;
 
 procedure TFSDMainMenuWizard.OnClickHorse(Sender: TObject);
 begin
-  ShellExecute(HInstance, 'open', 'https://github.com/HashLoad/horse-jwt', '', '', 0);
+  ShellExecute(HInstance, 'open', 'https://github.com/HashLoad/horse', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickHorseBasicAuth(Sender: TObject);
