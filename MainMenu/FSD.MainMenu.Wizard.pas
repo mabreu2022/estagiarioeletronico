@@ -304,7 +304,7 @@ begin
  // CreateSubMenu(itemFormacao, 'Novo Wirzard', 'imNovoWizard', OnClickNovoWizard);
   CreateSubMenu(itemFormacao, 'Histórico Projetos', 'imHistoricoProjetos', OnclickMenuHistoryProjects);
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
-  //CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
+  CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
 
   {Livros} //Recurso de Linguagem ainda em testes.
   FLingua:= GetWindowsDefaultLanguage;
@@ -507,7 +507,7 @@ end;
 
 procedure TFSDMainMenuWizard.OnClickLoja(Sender: TObject);
 begin
-  ShellExecute(HInstance, 'open', 'https://localhost:8077', '', '', 0);
+  ShellExecute(HInstance, 'open', 'https://conectsolutionsti.com.br/loja.php', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickMenuHistoryProjects(Sender: TObject);
