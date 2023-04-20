@@ -111,7 +111,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnclickEmbarcaderoGitHub(Sender: TObject);
      procedure OnclickChromiumGitHub(Sender: TObject);
      procedure OnclickSkia4Delphi(Sender: TObject);
-
+     procedure OnclickUserControl(Sender: TObject);
 
      {Blogs}
      procedure OnClickBlogConectSolutions(Sender: TObject);
@@ -124,6 +124,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickBlogLandgrafDev(Sender: TObject);
      procedure OnClickBlogStephenBalls(Sender: TObject);
      procedure OnClickBlogKonopka(Sender: TObject);
+     procedure OnClickBlogAndys(Sender: TObject);
 
      {Ferramentas para Download}
      procedure OnClickFerramentasIbExpert(Sender: TObject);
@@ -138,6 +139,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickFerramentasIdeFixPack(Sender: TObject);
      procedure OnClickFerramentasToolsFree(Sender: TObject);
      procedure OnClickFerramentasSiteGitIgnore(Sender: TObject);
+     procedure OnClickFerramentasSiteRegexLib(Sender: TObject);
 
      {Grupos de Facebook}
      procedure OnClickFacebookDelphiTips(Sender: TObject);
@@ -335,6 +337,8 @@ begin
   CreateSubMenu(itemFerramentas, 'Ide Fix Pack e DDevExtensions', 'imFerramentasIdeFixPack', OnClickFerramentasIdeFixPack);
   CreateSubMenu(itemFerramentas, 'Ferramentas free da Embarcadero', 'imFerramentasToolsFree', OnClickFerramentasToolsFree);
   CreateSubMenu(itemFerramentas, 'Site que gera .GitIgnore', 'imFerramentasSiteGitIgnore', OnClickFerramentasSiteGitIgnore);
+  CreateSubMenu(itemFerramentas, 'Site que gera Expressões Regulares', 'imFerramentasSiteRegexLib', OnClickFerramentasSiteRegexLib);
+
 
   {Blogs}
   itemBlogs := CreateSubMenu(itemFormacao, 'Blogs', 'imBlogs', nil);
@@ -348,6 +352,7 @@ begin
   CreateSubMenu(itemBlogs, 'Landrgraf.Dev', 'imBlogLandgrafDev', OnClickBlogLandgrafDev);
   CreateSubMenu(itemBlogs, 'Stephen Balls Technical Blog', 'imBlogStephenBalls', OnClickBlogStephenBalls);
   CreateSubMenu(itemBlogs, 'Ray Knopka Blog', 'imKonopka', OnClickBlogKonopka);
+  CreateSubMenu(itemBlogs, 'Andys Blog and Tools', 'imAndys', OnClickBlogAndys);
 
 
   {Grupos FaceBook - Delphi}
@@ -421,6 +426,7 @@ begin
   CreateSubMenu(itemGitHubs, 'Embarcadero' , 'imEmbarcaderoGitHub', OnclickEmbarcaderoGitHub);
   CreateSubMenu(itemGitHubs, 'Chromium' , 'imChromiumGitHub', OnclickChromiumGitHub);
   CreateSubMenu(itemGitHubs, 'Skia4Delphi' , 'imSkia4Delphi', OnclickSkia4Delphi);
+  CreateSubMenu(itemGitHubs, 'User Control' , 'imUsercontrol', OnclickUserControl);
 
 
 
@@ -588,6 +594,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickBlogAndreCelestino(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.andrecelestino.com/', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickBlogAndys(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.idefixpack.de/blog/ide-tools/ide-fix-pack/', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickBlogChapmanWorld(Sender: TObject);
@@ -821,6 +832,11 @@ begin
   ShellExecute(HInstance, 'open', 'https://www.toptal.com/developers/gitignore', '', '', 0);
 end;
 
+procedure TFSDMainMenuWizard.OnClickFerramentasSiteRegexLib(Sender: TObject);
+begin
+   ShellExecute(HInstance, 'open', 'https://regexlib.com/Default.aspx', '', '', 0);
+end;
+
 procedure TFSDMainMenuWizard.OnClickFerramentasSQLiteExpert(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.sqliteexpert.com/download.html', '', '', 0);
@@ -909,6 +925,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickTurboPackVCL(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://github.com/TurboPack/OnGuard-VCL', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnclickUserControl(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://github.com/infussolucoes/usercontrol-sd', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickVagasDelphi(Sender: TObject);
