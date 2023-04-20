@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E43F7CEF-F7D3-40BF-9184-49D63057816E}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="EstagiarioEletronico.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Comp_Estagiario\Comp_Estagiario.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Loja\Loja.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="EstagiarioEletronico">
+        <MSBuild Projects="EstagiarioEletronico.dproj"/>
+    </Target>
+    <Target Name="EstagiarioEletronico:Clean">
+        <MSBuild Projects="EstagiarioEletronico.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="EstagiarioEletronico:Make">
+        <MSBuild Projects="EstagiarioEletronico.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Comp_Estagiario">
+        <MSBuild Projects="..\Comp_Estagiario\Comp_Estagiario.dproj"/>
+    </Target>
+    <Target Name="Comp_Estagiario:Clean">
+        <MSBuild Projects="..\Comp_Estagiario\Comp_Estagiario.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Comp_Estagiario:Make">
+        <MSBuild Projects="..\Comp_Estagiario\Comp_Estagiario.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Loja">
+        <MSBuild Projects="..\Loja\Loja.dproj"/>
+    </Target>
+    <Target Name="Loja:Clean">
+        <MSBuild Projects="..\Loja\Loja.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Loja:Make">
+        <MSBuild Projects="..\Loja\Loja.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="EstagiarioEletronico;Comp_Estagiario;Loja"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="EstagiarioEletronico:Clean;Comp_Estagiario:Clean;Loja:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="EstagiarioEletronico:Make;Comp_Estagiario:Make;Loja:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
