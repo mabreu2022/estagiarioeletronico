@@ -112,6 +112,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnclickChromiumGitHub(Sender: TObject);
      procedure OnclickSkia4Delphi(Sender: TObject);
      procedure OnclickUserControl(Sender: TObject);
+     procedure OnclickAeggys(Sender: TObject);
 
      {Blogs}
      procedure OnClickBlogConectSolutions(Sender: TObject);
@@ -427,6 +428,7 @@ begin
   CreateSubMenu(itemGitHubs, 'Chromium' , 'imChromiumGitHub', OnclickChromiumGitHub);
   CreateSubMenu(itemGitHubs, 'Skia4Delphi' , 'imSkia4Delphi', OnclickSkia4Delphi);
   CreateSubMenu(itemGitHubs, 'User Control' , 'imUsercontrol', OnclickUserControl);
+  CreateSubMenu(itemGitHubs, 'Aeggys Acesso Remoto' , 'imAeggys', OnclickAeggys);
 
 
 
@@ -584,6 +586,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickAcoplamentosUnits(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'C:\Users\conec\Desktop\PesquisaAcoplamento\Win32\Debug\PesquisaAcoplamento.exe', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnclickAeggys(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://github.com/OpenSourceCommunityBrasil/Aegys-Acesso-Remoto/', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickAnalisarHints(Sender: TObject);

@@ -9,7 +9,7 @@
         <Projects Include="..\Comp_Estagiario\Comp_Estagiario.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\Loja\Loja.dproj">
+        <Projects Include="..\UinguiTeste\Loja.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -39,13 +39,13 @@
         <MSBuild Projects="..\Comp_Estagiario\Comp_Estagiario.dproj" Targets="Make"/>
     </Target>
     <Target Name="Loja">
-        <MSBuild Projects="..\Loja\Loja.dproj"/>
+        <MSBuild Projects="..\UinguiTeste\Loja.dproj"/>
     </Target>
     <Target Name="Loja:Clean">
-        <MSBuild Projects="..\Loja\Loja.dproj" Targets="Clean"/>
+        <MSBuild Projects="..\UinguiTeste\Loja.dproj" Targets="Clean"/>
     </Target>
     <Target Name="Loja:Make">
-        <MSBuild Projects="..\Loja\Loja.dproj" Targets="Make"/>
+        <MSBuild Projects="..\UinguiTeste\Loja.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
         <CallTarget Targets="EstagiarioEletronico;Comp_Estagiario;Loja"/>
