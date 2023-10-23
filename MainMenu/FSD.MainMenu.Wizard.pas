@@ -141,6 +141,8 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickFerramentasToolsFree(Sender: TObject);
      procedure OnClickFerramentasSiteGitIgnore(Sender: TObject);
      procedure OnClickFerramentasSiteRegexLib(Sender: TObject);
+     procedure OnClickFerramentasGoogleMeeting(Sender: TObject);
+
 
      {Grupos de Facebook}
      procedure OnClickFacebookDelphiTips(Sender: TObject);
@@ -189,7 +191,7 @@ end;
 
 { TFSDMainMenuWizard }
 
-procedure TFSDMainMenuWizard.AddImageToImageList;  //Foi criada uma variável para cada imagem e nnão deveria
+procedure TFSDMainMenuWizard.AddImageToImageList;  //Foi criada uma variável para cada imagem e não deveria
 var
   bitmap: TBitMap;
 begin
@@ -339,6 +341,7 @@ begin
   CreateSubMenu(itemFerramentas, 'Ferramentas free da Embarcadero', 'imFerramentasToolsFree', OnClickFerramentasToolsFree);
   CreateSubMenu(itemFerramentas, 'Site que gera .GitIgnore', 'imFerramentasSiteGitIgnore', OnClickFerramentasSiteGitIgnore);
   CreateSubMenu(itemFerramentas, 'Site que gera Expressões Regulares', 'imFerramentasSiteRegexLib', OnClickFerramentasSiteRegexLib);
+  CreateSubMenu(itemFerramentas, 'Transmitir Via Google Meeting', 'imFerramentasGoogleMeeeting', OnClickFerramentasGoogleMeeting);
 
 
   {Blogs}
@@ -798,6 +801,11 @@ begin
   ShellExecute(HInstance, 'open', 'https://firebirdsql.org/en/server-packages/', '', '', 0);
 end;
 
+procedure TFSDMainMenuWizard.OnClickFerramentasGoogleMeeting(Sender: TObject);
+begin
+   ShellExecute(HInstance, 'open', 'https://meet.google.com/rpr-dcvr-zbv?hs=122&authuser=0', '', '', 0);
+end;
+
 procedure TFSDMainMenuWizard.OnClickFerramentasIbExpert(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.ibexpert.net/downloadcenter/', '', '', 0);
@@ -843,6 +851,9 @@ procedure TFSDMainMenuWizard.OnClickFerramentasSiteRegexLib(Sender: TObject);
 begin
    ShellExecute(HInstance, 'open', 'https://regexlib.com/Default.aspx', '', '', 0);
 end;
+
+
+
 
 procedure TFSDMainMenuWizard.OnClickFerramentasSQLiteExpert(Sender: TObject);
 begin
