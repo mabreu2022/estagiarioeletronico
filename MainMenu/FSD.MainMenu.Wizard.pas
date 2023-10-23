@@ -309,6 +309,8 @@ begin
  // CreateSubMenu(itemFormacao, 'Novo Wirzard', 'imNovoWizard', OnClickNovoWizard);
   CreateSubMenu(itemFormacao, 'Histórico Projetos', 'imHistoricoProjetos', OnclickMenuHistoryProjects);
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
+  CreateSubMenu(itemFormacao, 'Transmitir via Google Meeting', 'imFerramentasGoogleMeeeting', OnClickFerramentasGoogleMeeting);
+
   //CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
 
   {Livros} //Recurso de Linguagem ainda em testes.
