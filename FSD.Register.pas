@@ -14,8 +14,12 @@ uses
 
 implementation
 
+uses
+  DesignIntf;
+
 procedure Register;
 begin
+  ForceDemandLoadState(dlDisable);
   RegisterHelloWorldWizard;
   RegisterMenuWizard;
   RegisterHistoryNotifier;

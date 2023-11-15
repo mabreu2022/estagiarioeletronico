@@ -48,6 +48,7 @@ contains
   FSD.NewProject.NewUnit.Component.ConnectionFiredac in 'NewProject\FSD.NewProject.NewUnit.Component.ConnectionFiredac.pas',
   FSD.NewProject.NewFormMain.Creator in 'NewProject\FSD.NewProject.NewFormMain.Creator.pas',
   FSD.NewProject.NewFormMain.SourceFile in 'NewProject\FSD.NewProject.NewFormMain.SourceFile.pas',
-  FSD.HistoryProjects.ContextMenu in 'HistoryProjects\FSD.HistoryProjects.ContextMenu.pas';
+  FSD.HistoryProjects.ContextMenu in 'HistoryProjects\FSD.HistoryProjects.ContextMenu.pas',
+  FSD.MainMenu.Information in 'MainMenu\FSD.MainMenu.Information.pas';
 
 end.

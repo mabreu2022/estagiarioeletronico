@@ -17,6 +17,8 @@ uses
   IniFiles;
 
 
+
+
 type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
   private
      FImageSQLite: integer;
@@ -142,6 +144,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickFerramentasSiteGitIgnore(Sender: TObject);
      procedure OnClickFerramentasSiteRegexLib(Sender: TObject);
      procedure OnClickFerramentasGoogleMeeting(Sender: TObject);
+     procedure OnClickFaceBookVideo(Sender: TObject);
 
 
      {Grupos de Facebook}
@@ -310,6 +313,8 @@ begin
   CreateSubMenu(itemFormacao, 'Histórico Projetos', 'imHistoricoProjetos', OnclickMenuHistoryProjects);
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
   CreateSubMenu(itemFormacao, 'Transmitir via Google Meeting', 'imFerramentasGoogleMeeeting', OnClickFerramentasGoogleMeeting);
+  CreateSubMenu(itemFormacao, 'Transmitir via FaceBook', 'imFaceBookVideo', OnClickFaceBookVideo);
+
 
   //CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
 
@@ -791,6 +796,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickFacebookLiteratudaDelphi(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://www.facebook.com/groups/1367500199938862/', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickFaceBookVideo(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.facebook.com/live/producer/v2/?entry_point=feedx_sprouts_profile&target_id=100001721318665', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickFerramentasCNPack(Sender: TObject);
