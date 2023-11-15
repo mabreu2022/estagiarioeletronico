@@ -145,6 +145,7 @@ type TFSDMainMenuWizard = class(TNotifierObject, IOTAWizard)
      procedure OnClickFerramentasSiteRegexLib(Sender: TObject);
      procedure OnClickFerramentasGoogleMeeting(Sender: TObject);
      procedure OnClickFaceBookVideo(Sender: TObject);
+     procedure OnClickLinkedinVideo(Sender: TObject);
 
 
      {Grupos de Facebook}
@@ -314,6 +315,7 @@ begin
   CreateSubMenu(itemFormacao, 'Embarcadero Doc Wiki', 'imDocWiki', OnClickDocWiki);
   CreateSubMenu(itemFormacao, 'Transmitir via Google Meeting', 'imFerramentasGoogleMeeeting', OnClickFerramentasGoogleMeeting);
   CreateSubMenu(itemFormacao, 'Transmitir via FaceBook', 'imFaceBookVideo', OnClickFaceBookVideo);
+  CreateSubMenu(itemFormacao, 'Transmitir via Linkedin', 'imLinkedinVideo', OnClickLinkedinVideo);
 
 
   //CreateSuBMenu(itemFormacao, 'Loja', 'imLoja', OnClickLoja);
@@ -511,6 +513,11 @@ end;
 procedure TFSDMainMenuWizard.OnClickJSONtoDelphiClass(Sender: TObject);
 begin
   ShellExecute(HInstance, 'open', 'https://jsontodelphi.com/', '', '', 0);
+end;
+
+procedure TFSDMainMenuWizard.OnClickLinkedinVideo(Sender: TObject);
+begin
+  ShellExecute(HInstance, 'open', 'https://www.linkedin.com/feed/?createEvent=true', '', '', 0);
 end;
 
 procedure TFSDMainMenuWizard.OnClickLivroDelphiAndroid(Sender: TObject);
